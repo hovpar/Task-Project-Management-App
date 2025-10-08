@@ -11,6 +11,7 @@ import java.util.UUID;
 @Entity
 @Setter
 @Getter
+@Table(name = "tasks")
 public class Task {
 
 
