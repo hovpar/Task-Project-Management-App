@@ -18,5 +18,5 @@ public class User {
     private String username;
 
     @Column(nullable = false)
-    private String passwordHash; // later: hash this (BCrypt)
+    private String password; // later: hash this (BCrypt)
 }

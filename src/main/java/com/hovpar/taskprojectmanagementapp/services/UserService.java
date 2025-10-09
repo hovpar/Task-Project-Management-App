@@ -4,7 +4,6 @@ import com.hovpar.taskprojectmanagementapp.models.User;
 import com.hovpar.taskprojectmanagementapp.repositories.UserRepository;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -16,15 +15,12 @@ public class UserService {
     }
 
     public User createUser(User user) {
-        // later: add validation, check if username exists, hash password
+
         return userRepository.save(user);
     }
 
-    public List<User> findAll() {
-        return userRepository.findAll();
-    }
-
-    public Optional<User> findById(Long id) {
-        return userRepository.findById(id);
+    public Optional<User> login(String username, String password) {
+        return userRepository.findByUsername(username)
+                .filter(u -> u.getPassword().equals(password));
     }
 }
