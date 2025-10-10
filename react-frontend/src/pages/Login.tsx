@@ -12,7 +12,7 @@ export default function Login() {
         try {
             const response = await axios.post('http://localhost:8080/login', { username, password });
             console.log('Login successful:', response.data);
-            navigate('/'); // Redirect to home on successful login
+            navigate('/projects'); // Redirect to home on successful login
         } catch (error) {
             console.error('Login failed:', error);
         }

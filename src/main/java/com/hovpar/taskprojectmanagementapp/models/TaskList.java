@@ -23,4 +23,9 @@ public class TaskList {
     // One TaskList can contain many Tasks
     @OneToMany(mappedBy = "taskList", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Task> tasks = new ArrayList<>();
+
+    // Many task_lists belong to one Project
+    @ManyToOne
+    @JoinColumn(name = "project_id")
+    private Project project;
 }
