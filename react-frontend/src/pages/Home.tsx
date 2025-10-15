@@ -1,6 +1,6 @@
 
 import type { FormEvent } from 'react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Button from '../components/common/Button';
 import TextField from '../components/common/TextField';
@@ -23,9 +23,9 @@ export default function Home() {
         navigate('/projects'); // Redirect to projects list page
     }
 
-    // useEffect(() => {
-    //     projectMockApi.getCurrentProject().then((res) => setProject(res.data));
-    // }, []);
+    useEffect(() => {
+        projectMockApi.getCurrentProject().then((res) => setProject(res.data));
+    }, []);
 
     const createProject = async (e: FormEvent) => {
         e.preventDefault();
