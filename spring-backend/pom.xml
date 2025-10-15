@@ -30,9 +30,6 @@
         <java.version>25</java.version>
     </properties>
 
-    <dependencyManagement>
-
-    </dependencyManagement>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>

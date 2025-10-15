@@ -34,18 +34,18 @@ public class ProjectService {
         return projectRepository.save(project);
     }
 
-    public Project updateProject(Long id, Project projectDetails) {
+    public Project updateProject(Long id, Project projectTitle) {
         Project project = projectRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("Project not found with id: " + id));
 
         // Check if another project with the same name exists (excluding current
         // project)
-        Optional<Project> existingProject = projectRepository.findByName(projectDetails.getName());
+        Optional<Project> existingProject = projectRepository.findByName(projectTitle.getName());
         if (existingProject.isPresent() && !existingProject.get().getId().equals(id)) {
-            throw new IllegalArgumentException("Project with name '" + projectDetails.getName() + "' already exists");
+            throw new IllegalArgumentException("Project with name '" + projectTitle.getName() + "' already exists");
         }
 
-        project.setName(projectDetails.getName());
+        project.setName(projectTitle.getName());
         return projectRepository.save(project);
     }
 
@@ -55,7 +55,4 @@ public class ProjectService {
         projectRepository.delete(project);
     }
 
-    public boolean existsById(Long id) {
-        return projectRepository.existsById(id);
-    }
 }

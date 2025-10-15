@@ -1,12 +1,21 @@
 package com.hovpar.taskprojectmanagementapp.repositories;
 
 import com.hovpar.taskprojectmanagementapp.models.TaskList;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
-public interface TaskListRepository {
+public interface TaskListRepository extends JpaRepository<TaskList, Long> {
 
-    List<TaskList> findAll();
+    @Query("SELECT t FROM TaskList t WHERE t.project.id = :projectId AND t.title = :name")
+    Optional<TaskList> findByProjectIdAndName(@Param("projectId") Long projectId, @Param("name") String name);
+
+    @Query("SELECT t FROM TaskList t WHERE t.project.id = :projectId")
+    List<TaskList> findAllByProjectId(@Param("projectId") Long projectId);
 }
