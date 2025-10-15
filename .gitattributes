@@ -1,2 +1,2 @@
-/mvnw text eol=lf
-*.cmd text eol=crlf
+spring-backend/mvnw text eol=lf
+spring-backend/*.cmd text eol=crlf

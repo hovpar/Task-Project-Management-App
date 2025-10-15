@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.hovpar</groupId>
-    <artifactId>Task-Project-Management-App</artifactId>
+    <artifactId>spring-backend</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>Task-Project-Management-App</name>
     <description>Task-Project-Management-App</description>
@@ -29,6 +29,10 @@
     <properties>
         <java.version>25</java.version>
     </properties>
+
+    <dependencyManagement>
+
+    </dependencyManagement>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
