@@ -1,6 +1,6 @@
 package com.hovpar.taskprojectmanagementapp.controllers;
 
-import com.hovpar.taskprojectmanagementapp.models.User;
+import com.hovpar.taskprojectmanagementapp.entities.User;
 import com.hovpar.taskprojectmanagementapp.services.UserService;
 import lombok.Getter;
 import lombok.Setter;

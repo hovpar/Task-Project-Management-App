@@ -1,6 +1,6 @@
 package com.hovpar.taskprojectmanagementapp.controllers;
 
-import com.hovpar.taskprojectmanagementapp.models.User;
+import com.hovpar.taskprojectmanagementapp.entities.User;
 import com.hovpar.taskprojectmanagementapp.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

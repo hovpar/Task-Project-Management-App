@@ -1,6 +1,6 @@
 package com.hovpar.taskprojectmanagementapp.repositories;
 
-import com.hovpar.taskprojectmanagementapp.models.User;
+import com.hovpar.taskprojectmanagementapp.entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,6 +1,6 @@
 package com.hovpar.taskprojectmanagementapp.controllers;
 
-import com.hovpar.taskprojectmanagementapp.models.Project;
+import com.hovpar.taskprojectmanagementapp.entities.Project;
 import com.hovpar.taskprojectmanagementapp.services.ProjectService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

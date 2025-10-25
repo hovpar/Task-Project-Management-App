@@ -1,4 +1,4 @@
-package com.hovpar.taskprojectmanagementapp.models;
+package com.hovpar.taskprojectmanagementapp.entities;
 
 import jakarta.persistence.*;
 import lombok.Getter;

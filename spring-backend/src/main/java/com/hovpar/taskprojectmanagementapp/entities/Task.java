@@ -1,4 +1,4 @@
-package com.hovpar.taskprojectmanagementapp.models;
+package com.hovpar.taskprojectmanagementapp.entities;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -13,12 +13,11 @@ import java.time.LocalDate;
 @Table(name = "tasks")
 public class Task {
 
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
-    @Column(unique = true, nullable = false)
+    @Column(nullable = false)
     private String title;
 
     private String description;

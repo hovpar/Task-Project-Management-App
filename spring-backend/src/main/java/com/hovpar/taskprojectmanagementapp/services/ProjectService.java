@@ -1,6 +1,6 @@
 package com.hovpar.taskprojectmanagementapp.services;
 
-import com.hovpar.taskprojectmanagementapp.models.Project;
+import com.hovpar.taskprojectmanagementapp.entities.Project;
 import com.hovpar.taskprojectmanagementapp.repositories.ProjectRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
